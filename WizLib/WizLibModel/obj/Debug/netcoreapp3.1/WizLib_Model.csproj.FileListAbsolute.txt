@@ -1,7 +1,6 @@
 G:\WizLib\WizLib\WizLibModel\bin\Debug\netcoreapp3.1\WizLib_Model.deps.json
 G:\WizLib\WizLib\WizLibModel\bin\Debug\netcoreapp3.1\WizLib_Model.dll
 G:\WizLib\WizLib\WizLibModel\bin\Debug\netcoreapp3.1\WizLib_Model.pdb
-G:\WizLib\WizLib\WizLibModel\obj\Debug\netcoreapp3.1\WizLib_Model.csprojAssemblyReference.cache
 G:\WizLib\WizLib\WizLibModel\obj\Debug\netcoreapp3.1\WizLib_Model.AssemblyInfoInputs.cache
 G:\WizLib\WizLib\WizLibModel\obj\Debug\netcoreapp3.1\WizLib_Model.AssemblyInfo.cs
 G:\WizLib\WizLib\WizLibModel\obj\Debug\netcoreapp3.1\WizLib_Model.csproj.CoreCompileInputs.cache
