@@ -1,0 +1,12 @@
+G:\WizLib\WizLib\WizLib_DataAccess\bin\Debug\netcoreapp3.1\WizLib_DataAccess.deps.json
+G:\WizLib\WizLib\WizLib_DataAccess\bin\Debug\netcoreapp3.1\WizLib_DataAccess.dll
+G:\WizLib\WizLib\WizLib_DataAccess\bin\Debug\netcoreapp3.1\WizLib_DataAccess.pdb
+G:\WizLib\WizLib\WizLib_DataAccess\bin\Debug\netcoreapp3.1\WizLib_Model.dll
+G:\WizLib\WizLib\WizLib_DataAccess\bin\Debug\netcoreapp3.1\WizLib_Model.pdb
+G:\WizLib\WizLib\WizLib_DataAccess\obj\Debug\netcoreapp3.1\WizLib_DataAccess.csprojAssemblyReference.cache
+G:\WizLib\WizLib\WizLib_DataAccess\obj\Debug\netcoreapp3.1\WizLib_DataAccess.AssemblyInfoInputs.cache
+G:\WizLib\WizLib\WizLib_DataAccess\obj\Debug\netcoreapp3.1\WizLib_DataAccess.AssemblyInfo.cs
+G:\WizLib\WizLib\WizLib_DataAccess\obj\Debug\netcoreapp3.1\WizLib_DataAccess.csproj.CoreCompileInputs.cache
+G:\WizLib\WizLib\WizLib_DataAccess\obj\Debug\netcoreapp3.1\WizLib_DataAccess.csproj.CopyComplete
+G:\WizLib\WizLib\WizLib_DataAccess\obj\Debug\netcoreapp3.1\WizLib_DataAccess.dll
+G:\WizLib\WizLib\WizLib_DataAccess\obj\Debug\netcoreapp3.1\WizLib_DataAccess.pdb
