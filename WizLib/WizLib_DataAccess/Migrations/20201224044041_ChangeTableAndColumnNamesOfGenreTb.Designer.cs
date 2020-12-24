@@ -9,8 +9,8 @@ using WizLib_DataAccess.Data;
 namespace WizLib_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201223093236_removeGenreMigrationFromDB")]
-    partial class removeGenreMigrationFromDB
+    [Migration("20201224044041_ChangeTableAndColumnNamesOfGenreTb")]
+    partial class ChangeTableAndColumnNamesOfGenreTb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,6 +33,22 @@ namespace WizLib_DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("GetCategories");
+                });
+
+            modelBuilder.Entity("WizLib_Model.Models.Genre", b =>
+                {
+                    b.Property<int>("GenreId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("GenreName")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Name");
+
+                    b.HasKey("GenreId");
+
+                    b.ToTable("tb_Genre");
                 });
 #pragma warning restore 612, 618
         }
