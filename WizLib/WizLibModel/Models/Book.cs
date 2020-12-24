@@ -29,5 +29,7 @@ namespace WizLib_Model.Models
         public int Publisher_Id { get; set; }
         public Publisher Publisher { get; set; }
 
+        public ICollection<BookAuthor> BookAuthors { get; set; }
+
     }
 }
