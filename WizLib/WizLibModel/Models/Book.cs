@@ -25,5 +25,9 @@ namespace WizLib_Model.Models
         public int BookDetail_Id { get; set; }
         public BookDetails BookDetails { get; set; }
 
+        [ForeignKey("Publisher")]
+        public int Publisher_Id { get; set; }
+        public Publisher Publisher { get; set; }
+
     }
 }
