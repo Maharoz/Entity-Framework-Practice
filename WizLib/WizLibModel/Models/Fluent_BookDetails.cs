@@ -11,6 +11,6 @@ namespace WizLib_Model.Models
         public string NumberOfChapters{ get;set;}
         public string NumberOfPages { get; set; }
         public double Weight { get; set; }
-        public Book Book { get; set; }
+        public Fluent_Book Fluent_Book { get; set; }
     }
 }
