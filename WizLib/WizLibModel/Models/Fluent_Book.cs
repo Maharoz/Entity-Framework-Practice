@@ -18,5 +18,6 @@ namespace WizLib_Model.Models
 
         public int Publisher_Id { get; set; }
         public Fluent_Publisher Fluent_Publisher { get; set; }
+        public ICollection<Fluent_BookAuthor> Fluent_BookAuthor { get; set; }
     }
 }
