@@ -389,3 +389,4 @@ G:\WizLib\WizLib\WizLib\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.
 G:\WizLib\WizLib\WizLib\bin\Debug\net5.0\libman.json
 G:\WizLib\WizLib\WizLib\bin\Debug\net5.0\Humanizer.dll
 G:\WizLib\WizLib\WizLib\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+G:\WizLib\WizLib\WizLib\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
