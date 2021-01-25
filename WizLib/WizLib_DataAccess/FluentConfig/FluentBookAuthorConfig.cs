@@ -8,7 +8,6 @@ using WizLib_Model.Models;
 namespace WizLib_DataAccess.FluentConfig
 {
 
-
     public class FluentBookAuthorConfig : IEntityTypeConfiguration<Fluent_BookAuthor>
     {
         public void Configure(EntityTypeBuilder<Fluent_BookAuthor> modelBuilder)
