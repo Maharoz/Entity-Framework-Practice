@@ -84,7 +84,7 @@ namespace WizLib.Controllers
               //  });
             }
             _db.Categories.AddRange(catList);
-           // _db.SaveChanges();
+            _db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
@@ -101,9 +101,32 @@ namespace WizLib.Controllers
                 //  });
             }
             _db.Categories.AddRange(catList);
-            // _db.SaveChanges();
+             _db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+
+        public IActionResult RemoveMultiple2()
+        {
+
+            IEnumerable<Category> catList = _db.Categories.OrderByDescending(u => u.Category_Id).Take(2).ToList();
+            
+            _db.Categories.RemoveRange(catList);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public IActionResult RemoveMultiple5()
+        {
+            List<Category> catList = _db.Categories.OrderByDescending(u => u.Category_Id).Take(5).ToList();
+
+
+            _db.Categories.RemoveRange(catList);
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
 
     }
 }
