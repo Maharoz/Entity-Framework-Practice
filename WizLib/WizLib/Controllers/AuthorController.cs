@@ -8,12 +8,12 @@ using WizLib_Model.Models;
 
 namespace WizLib.Controllers
 {
-    public class BookController : Controller
+    public class AuthorController : Controller
     {
 
         private readonly ApplicationDbContext _db;
 
-        public BookController(ApplicationDbContext db)
+        public AuthorController(ApplicationDbContext db)
         {
             _db = db;
         }

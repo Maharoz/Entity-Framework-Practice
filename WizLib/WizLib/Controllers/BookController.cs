@@ -9,12 +9,12 @@ using WizLib_Model.ViewModels;
 
 namespace WizLib.Controllers
 {
-    public class AuthorController : Controller
+    public class BookController : Controller
     {
 
         private readonly ApplicationDbContext _db;
 
-        public AuthorController(ApplicationDbContext db)
+        public BookController(ApplicationDbContext db)
         {
             _db = db;
         }
