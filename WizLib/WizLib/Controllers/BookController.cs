@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,15 @@ namespace WizLib.Controllers
 {
     public class BookController : Controller
     {
-
         private readonly ApplicationDbContext _db;
 
         public BookController(ApplicationDbContext db)
         {
             _db = db;
         }
+
         public IActionResult Index()
         {
-
             List<Book> objList = _db.Books.ToList();
             return View(objList);
         }
@@ -28,16 +28,16 @@ namespace WizLib.Controllers
         public IActionResult Upsert(int? id)
         {
             BookVM obj = new BookVM();
-            obj.PublisherList = _db.Publishers.Select(i => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+            obj.PublisherList = _db.Publishers.Select(i => new SelectListItem
             {
                 Text = i.Name,
                 Value = i.Publisher_Id.ToString()
-            }); 
+            });
             if (id == null)
             {
                 return View(obj);
             }
-
+            //this for edit
             obj.Book = _db.Books.FirstOrDefault(u => u.Book_Id == id);
             if (obj == null)
             {
@@ -46,65 +46,30 @@ namespace WizLib.Controllers
             return View(obj);
         }
 
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Book obj)
+        public IActionResult Upsert(BookVM obj)
         {
-            if (ModelState.IsValid)
+            if (obj.Book.Book_Id == 0)
             {
-                if (obj.Book_Id == 0)
-                {
-                    _db.Books.Add(obj);
-                }
-                else
-                {
-                    _db.Books.Update(obj);
-                }
-                _db.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                //this is create
+                _db.Books.Add(obj.Book);
             }
-
-            return View(obj);
+            else
+            {
+                //this is an update
+                _db.Books.Update(obj.Book);
+            }
+            _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
-
 
         public IActionResult Delete(int id)
         {
-        
+            var objFromDb = _db.Books.FirstOrDefault(u => u.Book_Id == id);
+            _db.Books.Remove(objFromDb);
+            _db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
-
-        public IActionResult CreateMultiple2()
-        {
-
-          
-            return RedirectToAction(nameof(Index));
-        }
-
-
-        public IActionResult CreateMultiple5()
-        {
-           
-            return RedirectToAction(nameof(Index));
-        }
-
-
-        public IActionResult RemoveMultiple2()
-        {
-
-           
-            return RedirectToAction(nameof(Index));
-        }
-
-
-        public IActionResult RemoveMultiple5()
-        {
-           
-            return RedirectToAction(nameof(Index));
-        }
-
-
     }
 }
