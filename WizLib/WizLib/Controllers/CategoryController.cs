@@ -36,7 +36,7 @@ namespace WizLib.Controllers
             {
                 return NotFound();
             }
-                return View(obj);
+            return View(obj);
         }
 
 
@@ -68,6 +68,40 @@ namespace WizLib.Controllers
             var objFromDb = _db.Categories.FirstOrDefault(u => u.Category_Id == id);
             _db.Categories.Remove(objFromDb);
             _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult CreateMultiple2()
+        {
+
+            List<Category> catList = new List<Category>();
+            for (int i = 1; i <= 2; i++)
+            {
+                catList.Add(new Category { Name = Guid.NewGuid().ToString() });
+              //  _db.Categories.Add(new Category
+               // {
+               //     Name = Guid.NewGuid().ToString()
+              //  });
+            }
+            _db.Categories.AddRange(catList);
+           // _db.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public IActionResult CreateMultiple5()
+        {
+            List<Category> catList = new List<Category>();
+            for (int i = 1; i <= 5; i++)
+            {
+                catList.Add(new Category { Name = Guid.NewGuid().ToString() });
+                //  _db.Categories.Add(new Category
+                // {
+                //     Name = Guid.NewGuid().ToString()
+                //  });
+            }
+            _db.Categories.AddRange(catList);
+            // _db.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
