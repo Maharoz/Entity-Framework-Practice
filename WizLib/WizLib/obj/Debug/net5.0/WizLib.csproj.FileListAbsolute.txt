@@ -435,3 +435,8 @@ G:\WizLib\WizLib\WizLib\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspac
 G:\WizLib\WizLib\WizLib\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 G:\WizLib\WizLib\WizLib\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 G:\WizLib\WizLib\WizLib\obj\Debug\net5.0\Razor\Views\Category\Upsert.cshtml.g.cs
+G:\WizLib\WizLib\WizLib\obj\Debug\net5.0\Razor\Views\Publisher\Index.cshtml.g.cs
+G:\WizLib\WizLib\WizLib\obj\Debug\net5.0\Razor\Views\Publisher\Upsert.cshtml.g.cs
+G:\WizLib\WizLib\WizLib\obj\Debug\net5.0\Razor\Views\Author\Index.cshtml.g.cs
+G:\WizLib\WizLib\WizLib\obj\Debug\net5.0\Razor\Views\Author\Upsert.cshtml.g.cs
+G:\WizLib\WizLib\WizLib\obj\Debug\net5.0\Razor\Views\Book\Index.cshtml.g.cs
