@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WizLib_DataAccess.Data;
 using WizLib_Model.Models;
+using WizLib_Model.ViewModels;
 
 namespace WizLib.Controllers
 {
@@ -26,13 +27,18 @@ namespace WizLib.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Book obj = new Book();
+            BookVM obj = new BookVM();
+            obj.PublisherList = _db.Publishers.Select(i => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+            {
+                Text = i.Name,
+                Value = i.Publisher_Id.ToString()
+            }); 
             if (id == null)
             {
                 return View(obj);
             }
 
-            obj = _db.Books.FirstOrDefault(u => u.Book_Id == id);
+            obj.Book = _db.Books.FirstOrDefault(u => u.Book_Id == id);
             if (obj == null)
             {
                 return NotFound();
